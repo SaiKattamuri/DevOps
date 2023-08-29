@@ -16,3 +16,4 @@ Fedora: For developers who prefer RHEL, Fedora is a good option to be explored.
 
 So, Let's begin to understand the Linux:
 
+In Linux there are
