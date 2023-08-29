@@ -29,7 +29,6 @@ We can learn about each tool and cover more in-depth concepts when we work on SC
 When we complete the development, we are not going to deliver the code to clients. In the delivery process, we need to make a final build, which is completely compressed packaged ready to deploy.
 
 ![image](https://github.com/SaiKattamuri/DevOps/assets/50263861/a76d517b-127c-4118-8ccf-51543dfe346f)
-
 ![image](https://github.com/SaiKattamuri/DevOps/assets/50263861/57eca6f3-6d9d-40b0-8319-0c0b5659e932)
 
 below are examples of different code base build tools:  
