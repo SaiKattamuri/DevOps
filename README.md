@@ -31,13 +31,28 @@ When we complete the development, we are not going to deliver the code to client
 ![image](https://github.com/SaiKattamuri/DevOps/assets/50263861/a76d517b-127c-4118-8ccf-51543dfe346f)
 ![image](https://github.com/SaiKattamuri/DevOps/assets/50263861/57eca6f3-6d9d-40b0-8319-0c0b5659e932)
 
-below are examples of different code base build tools:  
-Source Code	        Build Tool
-Java	              Maven, Gradle, and Ant.
-Python	            Pip, Pybuild, and Maven with Jython plugin
-.net	              MSbuild, zip
-JavaScript	        Npm, yarn, webpack
-Unix/Linux          rpm-build
+below are examples of different code base build tools:
+
+<table>
+  <tr>
+    <th>Source Code</th>
+    <th>Build Tool</th>    
+  </tr>
+  <tr>
+    <td>Java</td>
+    <td>Python</td>
+    <td>.net</td>
+    <td>JavaScript</td>
+    <td>Linux</td>
+  </tr>
+  <tr>
+    <td>Maven, Gradle, and Ant</td>
+    <td>Pip, Pybuild, and Maven with Jython plugin</td>
+    <td>MSbuild, zip</td>
+    <td>Npm, yarn, webpack</td>
+    <td>rpm-build</td>
+  </tr>
+</table>      
 
 <h3>Containerization:</h3>
 Containerization involves placing a software component and its environment, dependencies, and configuration, into an isolated unit called a container.
