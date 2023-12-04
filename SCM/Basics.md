@@ -46,9 +46,15 @@ The term repository means: a repository is a place where you dump things; source
  </p>
 
 - **Working area** where the project is created and git is initialized - git init/git clone
-- **Staging area** where the files are added for tracking - git add
+- **Staging area** where the files are added for tracking, it is an imaginary or hidden area - git add
 - **Local repo** where the files are committed and marked as version - git commit -m "proper message"
- 
+
+There are mainly 3 stages in git:
+
+- Untracked files -- Files avilable in working directory
+- Staged/tracking files -- Files added to track, available in staging area.
+- Comitted files -- After the comitting the files, will move from stagging to loca repos.
+
 Ex -1:
 Create a local git repo then add the remote to push changes as collabration:
 
@@ -66,9 +72,17 @@ Create a local git repo then add the remote to push changes as collabration:
 
     - After initializing the working directory as the git directory, the test_project is added as Master and a local repository will be created.
     - The Master is the default branch name after the git init, we can control the name of the default branch by the config.
-          git config --global init.defaultbranch main
+          git config --global init.defaultbranch main    
     - After git initialization, there will be a hidden directory called "git", which contains the git repository metadata like hooks, remote, Header, objects, config, etc...
-    
+
+For every commit, it will store the user details to understand who made changes on what commit for that we need to config the user details as:
+<p>
+
+    git config --global user.name "Sai Kattamuri"
+    git config --global user.email "user@domain.com"
+  
+</p>
+
 2. Add a file to track     
 
 <div>
@@ -118,6 +132,8 @@ Once we run the above commands the file will be added to the staging area. To re
     - The git will generate a unique 16-digit sha-id to represent each commit.
     - The sha-id is used to retrieve the file's data from history.
     - And after committing the work area will show as clean
+    - The first commit also called as **~Head**
+    - While the commits increases the Head will points to the latest commit similar to stack
 
 4. Add the remote repository and push the changes
 
