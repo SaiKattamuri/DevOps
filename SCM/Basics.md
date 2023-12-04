@@ -1,0 +1,95 @@
+SCM/VC, Which means versioning and tracking the information. In day-to-day activities, we may need to make changes and manage the changes to and fro, and in case of a large number of changes.
+In such cases either we need to take manual backups or versions of the source code, the management of source code in a group of developers is a hard job.
+
+So, We can use tools like **SCM(Source Code Management)/VC (Version Controller)**. Using these SCM tools we can go into history and get the older version of our code to live.
+
+<p align="center">
+  <img src="https://github.com/SaiKattamuri/DevOps/assets/50263861/0c21d56f-1518-4840-b7b5-180e58b54f88" width="400" height="200">
+</p>
+
+For Ex:
+  - I want to create a "myfile.txt" and add content like "I am a test file"
+  - After a few months as per the requirement, I changed the content to "I am an original file"
+  - After some time, I need to bring back the old content, then we need to rewrite the file again.
+
+It is a small content, so we can use and revoke the data, but in real-time we will work on hundreds and thousands of lines of code. It will be difficult to manage the files.
+
+There are two types of SCM tools:
+  1. **Centralized** VC - Ex: SVN
+  2. **Distributed** VC - Ex: Github, Git Lab, Bit Bucket, Gerrit.
+
+<p align="center">
+   <img src="https://github.com/SaiKattamuri/DevOps/assets/50263861/d801103a-a124-4ad7-9093-4d69a0c2dab5">
+</p>
+
+In current days almost all projects use Distributed VC, here there are two types of version control are possible.
+  1. **Local Repository -** Git
+  2. **Remote Repository -** GitHub, Git Lab, Bit Bucket, Gerrit
+
+The term repository means: a repository is a place where you dump things; source code, config files, variables, images, etc..
+**Note:** It is better to not add sensitive information like "Passwords", "secret data"
+
+**Local Repos**: Owned by individual developers to contribute to the team, create sources and contribute to the team, or collect the data remotely and add files or change the files.
+
+**Remote Repos**: A collective dump of all the users for the project.
+<h3>Git Installation</h3>
+  Git is available for Windows, Linux, and Mac in terms of binary files. Based on the OS type we can install the git using the package manager:
+  
+    For Debian-based: - sudo apt install git -y
+    
+    For Centos-based: - sudo yum install git -y
+  
+<h3>Git Work Flow:</h3>
+
+ <p aligin="center">
+    <img src="https://github.com/SaiKattamuri/DevOps/assets/50263861/08ebf7f4-0781-4612-a778-59bef47ce82e" width="600" height="400">
+ </p>
+
+- **Working area** where the project is created and git is initialized - git init/git clone
+- **Staging area** where the files are added for tracking - git add
+- **Local repo** where the files are committed and marked as version - git commit -m "proper message"
+ 
+Ex:
+Create a local git repo and push changes to the remote repo:
+1. Create a directory and init the working directory:
+<div>
+  <p aligin="left">
+  
+      mkdir test_project  
+      cd test_project   
+      git init
+  </p>
+  <img src="https://github.com/SaiKattamuri/DevOps/assets/50263861/9bbca901-48d6-4a0b-9389-86aba3c5946f">  
+</div>
+**Note**: Please Observe the above reference image:
+
+    - After initializing the working directory as the git directory, the test_project is added as Master.
+    - The Master is the default branch name after the git init, we can control the name of the default branch by the config.
+          git config --global init.defaultbranch main
+    - After git initialization, there will be a hidden directory called "git", which contains the git repository metadata like hooks, remote, Header, objects, config, etc...
+    
+2. Add a file to track
+     
+![image](https://github.com/SaiKattamuri/DevOps/assets/50263861/1668fac6-04de-4343-8215-c81fa828c59c)
+
+  git status
+  touch file.txt
+  git status
+  git add
+
+  **Note**: Please Observe the above reference image:
+
+    - git status is used to explain the current status of each file and where we are, from the image we are on the master or main branch.
+    - Before adding the file.txt, the git status mentioned that there are no files to track and create files to track
+    - After adding the file, the git status is updated as there is a file but not tracked by git.
+
+  ![image](https://github.com/SaiKattamuri/DevOps/assets/50263861/54dabeb9-aab7-435b-b2ec-45c0c8db86dd)
+
+We can use the below command to add to git and track the file
+
+- git add filename - to add the particular file to track
+- git add . - to add all the available files to track
+
+Once we run the above commands the file will be added to the staging area.
+
+3. 
