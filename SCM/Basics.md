@@ -49,8 +49,9 @@ The term repository means: a repository is a place where you dump things; source
 - **Staging area** where the files are added for tracking - git add
 - **Local repo** where the files are committed and marked as version - git commit -m "proper message"
  
-Ex:
-Create a local git repo and push changes to the remote repo:
+Ex -1:
+Create a local git repo then add the remote to push changes as collabration:
+
 1. Create a directory and init the working directory:
 <div>
   <p aligin="left">
@@ -63,20 +64,26 @@ Create a local git repo and push changes to the remote repo:
 </div>
 **Note**: Please Observe the above reference image:
 
-    - After initializing the working directory as the git directory, the test_project is added as Master.
+    - After initializing the working directory as the git directory, the test_project is added as Master and a local repository will be created.
     - The Master is the default branch name after the git init, we can control the name of the default branch by the config.
           git config --global init.defaultbranch main
     - After git initialization, there will be a hidden directory called "git", which contains the git repository metadata like hooks, remote, Header, objects, config, etc...
     
-2. Add a file to track
-     
-![image](https://github.com/SaiKattamuri/DevOps/assets/50263861/1668fac6-04de-4343-8215-c81fa828c59c)
+2. Add a file to track     
 
-  git status
-  touch file.txt
-  git status
-  git add
-
+<div>
+  <p aligin="left">
+    
+    git status
+    touch file.txt
+    git status
+    git add
+    
+  </p>
+  
+  ![image](https://github.com/SaiKattamuri/DevOps/assets/50263861/1668fac6-04de-4343-8215-c81fa828c59c)
+    
+</div>
   **Note**: Please Observe the above reference image:
 
     - git status is used to explain the current status of each file and where we are, from the image we are on the master or main branch.
@@ -90,6 +97,55 @@ We can use the below command to add to git and track the file
 - git add filename - to add the particular file to track
 - git add . - to add all the available files to track
 
-Once we run the above commands the file will be added to the staging area.
+Once we run the above commands the file will be added to the staging area. To remove files from the staging area we can use the below command:
 
-3. 
+  git rm --cached filename
+
+3.  Save the changes to the Local repository.
+
+  <p>
+    
+       git commit -m "demo file created"    
+       git status    
+       git log
+  </p>
+
+  ![image](https://github.com/SaiKattamuri/DevOps/assets/50263861/c5c53aa0-b559-45cc-bc60-d9f4ba648b09)
+
+
+ **Note**: After execution of the commit
+ 
+    - The git will generate a unique 16-digit sha-id to represent each commit.
+    - The sha-id is used to retrieve the file's data from history.
+    - And after committing the work area will show as clean
+
+4. Add the remote repository and push the changes
+
+     <p>
+       
+         git remote add origin "git url"
+       
+         git push --set-upstream origin branch name
+     </p>
+    
+    The git url is from git hub/gitlab/ gerrit, for that first we need to create a remote repo then add the synch between remote and local repo using the ssh key pair.
+
+   **Here the origin is a name for the git remote synch link at local, we can use any name but better to follow process
+
+ 
+Ex -2:
+Clone the existing repo and add changes as a collabration
+
+<p>
+
+    git clone "git url"
+    cd name_git
+    touch file[1-5].txt
+    git add .
+    git commit -m "Adding files to repo"
+    git push -u origin master
+</p>
+
+**Recomendations:**
+    - Before starting any changes to the files, use the git pull. So no overwritten happen.
+  
