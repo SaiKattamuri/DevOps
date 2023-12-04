@@ -41,27 +41,32 @@ Note: we use --global as global config, if required replace the global keyword w
 8. To list the all the config available in the repo
 
         git config --list
-9. Set the merge tool or editor
+   
+10. Set the merge tool or editor
 
-         git config merge.tool "tool_name"
-10. Config Line endings.
+        git config merge.tool "tool_name"
+        
+12. Config Line endings.
 
-          git config --global core.autocrif input
-11. set aliass
+      git config --global core.autocrif input
+    
+13. set aliass
+    
+      git config --global alias.online git log --online
 
-          git config --global alias.online git log --online
-
-12. Set the push behavior
+14. Set the push behavior
 
       git config --gllobal push.default simple
-13. Set Auto correct for typos:
+    
+15. Set Auto correct for typos:
 
       git config --global help.autocorrect 1
-14. Config the git to ignore the file permissions
+    
+16. Config the git to ignore the file permissions
 
       git config core.fileMode false
 
-15. Config the autostash for rebase:
+17. Config the autostash for rebase:
 
       git config --global rebase.autostash
     
